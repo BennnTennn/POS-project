@@ -16,5 +16,4 @@ Kiwi|9|9
 Grapes|6|12
 Strawberry|10|7
 Blueberry|10|7
-Pineapple|8|5
-Pomegranate|9|8
+Pineapple|18|5
