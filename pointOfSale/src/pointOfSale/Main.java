@@ -26,7 +26,7 @@ public class Main extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        setContentPane(new BackgroundPanel("src/image/sample.png"));
+        setContentPane(new BackgroundPanel("C:\\Users\\Student\\eclipse-workspace\\POS-project-main\\pointOfSale\\src\\image\\sample.png"));
         setLayout(new BorderLayout());
 
         cardLayout = new CardLayout();
@@ -367,7 +367,7 @@ public class Main extends JFrame {
 
     private void loadInventory(DefaultTableModel model){
 
-        File file=new File("fruit_data.txt");
+        File file=new File("C:\\Users\\Student\\eclipse-workspace\\POS-project-main\\pointOfSale\\fruit_data.txt");
         model.setRowCount(0);
 
         if(!file.exists()) return;
@@ -393,7 +393,7 @@ public class Main extends JFrame {
     private void saveInventory(){
         try(PrintWriter w=
                     new PrintWriter(
-                            new FileWriter("fruit_data.txt"))){
+                            new FileWriter("C:\\Users\\Student\\eclipse-workspace\\POS-project-main\\fruit_data.txt"))){
 
             for(String f:inventoryStock.keySet()){
                 w.println(f+"|"+
@@ -405,31 +405,53 @@ public class Main extends JFrame {
         }
     }
 
-    private void adminLogin(){
+    private void adminLogin() {
+        JTextField u = new JTextField();
+        JPasswordField p = new JPasswordField();
 
-        JTextField u=new JTextField();
-        JPasswordField p=new JPasswordField();
-
-        JPanel panel=new JPanel(new GridLayout(2,2));
+        JPanel panel = new JPanel(new GridLayout(2, 2));
         panel.add(new JLabel("Username")); panel.add(u);
         panel.add(new JLabel("Password")); panel.add(p);
 
-        int r=JOptionPane.showConfirmDialog(
-                this,panel,"Admin Login",
+        int r = JOptionPane.showConfirmDialog(
+                this, panel, "Admin Login",
                 JOptionPane.OK_CANCEL_OPTION);
 
-        if(r==JOptionPane.OK_OPTION){
-            if("admin".equals(u.getText())
-                    && "1234".equals(new String(p.getPassword()))){
-                cardLayout.show(cardPanel,"ADMIN");
-            }else{
-                JOptionPane.showMessageDialog(this,"Wrong login");
+        if (r == JOptionPane.OK_OPTION) {
+            String username = u.getText().trim();
+            String password = new String(p.getPassword());
+
+            if (checkCredentials(username, password)) {
+                cardLayout.show(cardPanel, "ADMIN");
+            } else {
+                JOptionPane.showMessageDialog(this, "Wrong login");
             }
         }
     }
 
+    private boolean checkCredentials(String username, String password) {
+        File file = new File("C:\\Users\\Student\\eclipse-workspace\\POS-project-main\\pointOfSale\\admin_accounts.txt"); // format: user|password per line
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                String[] parts = line.split("\\|");
+                if (parts.length == 2) {
+                    String fileUser = parts[0].trim();
+                    String filePass = parts[1].trim();
+                    if (username.equals(fileUser) && password.equals(filePass)) {
+                        return true;
+                    }
+                }
+            }
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error reading users file");
+        }
+        return false;
+    }
+
+
     private void loadAdminAccounts(){
-        File file=new File("admin_accounts.txt");
+        File file=new File("C:\\Users\\Student\\eclipse-workspace\\POS-project-main\\pointOfSale\\admin_accounts.txt");
         if(!file.exists()) return;
 
         try(Scanner sc=new Scanner(file)){
