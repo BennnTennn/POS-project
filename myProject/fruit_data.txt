@@ -1,0 +1,16 @@
+Fruit,Price,Stock
+Papaya,16,20
+Cherry,40,5
+Watermelon,22,18
+Peach,28,7
+Mango,15,30
+Orange,12,25
+Lemon,5,28
+Banana,8,36
+Apple,10,50
+Kiwi,20,6
+Grapes,18,11
+Strawberry,30,7
+Blueberry,35,8
+Avocado,56,10
+Pineapple,25,10
