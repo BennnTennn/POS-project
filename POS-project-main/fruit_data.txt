@@ -1,0 +1,98 @@
+Fruit,Price,Stock
+Apple,25,120
+Banana,10,200
+Mango,30,150
+Orange,20,130
+Pineapple,45,80
+Papaya,35,90
+Grapes,40,110
+Watermelon,60,70
+Melon,55,75
+Strawberry,70,60
+Blueberry,85,50
+Raspberry,90,45
+Blackberry,95,40
+Kiwi,65,85
+Peach,50,95
+Pear,45,100
+Plum,40,105
+Cherry,100,35
+Apricot,55,80
+Pomegranate,75,65
+Guava,30,120
+Lychee,85,55
+Dragonfruit,95,50
+Passionfruit,80,60
+Coconut,35,140
+Avocado,60,90
+Jackfruit,70,50
+Durian,120,30
+Tamarind,25,100
+Starfruit,40,85
+Persimmon,55,75
+Fig,65,70
+Date,50,95
+Cranberry,90,40
+Gooseberry,45,85
+Mulberry,70,60
+Longan,80,55
+Mangosteen,110,35
+Rambutan,85,60
+Soursop,65,70
+Sapodilla,50,90
+Breadfruit,55,80
+Calamansi,15,200
+Lime,18,180
+Lemon,22,160
+Tangerine,28,140
+Cantaloupe,60,75
+Honeydew,58,70
+Ugli Fruit,65,50
+Kumquat,40,90
+Salak,70,60
+Langsat,75,55
+Santol,50,85
+Atis,45,95
+Dalandan,25,120
+Marang,85,40
+Bignay,60,65
+Aratiles,20,150
+Kamias,18,160
+Macopa,30,110
+Duhat,40,100
+Chico,35,105
+Cempedak,80,45
+Pulasan,90,40
+Bael,70,50
+Jujube,55,80
+Medlar,65,70
+Nance,50,85
+Tamarillo,75,60
+Ackee,85,55
+Bilberry,95,40
+Boysenberry,100,35
+Cloudberry,110,30
+Elderberry,90,45
+Feijoa,60,75
+Finger Lime,120,25
+Gac,95,40
+Huckleberry,85,50
+Ilama,70,60
+Jabuticaba,110,35
+Kaffir Lime,30,100
+Kei Apple,50,80
+Lulo,65,70
+Mammee Apple,75,60
+Miracle Fruit,130,20
+Monstera Fruit,90,45
+Mountain Apple,55,80
+Naranjilla,70,60
+Pequi,85,50
+Pitanga,75,55
+Quandong,95,40
+Rose Apple,50,85
+Safou,80,45
+Tangelo,60,75
+White Sapote,90,40
+Yuzu,100,35
+Ziziphus Fruit,55,80
